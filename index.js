@@ -25,7 +25,7 @@ function draw(){
 }
 let i = 0
 let j = 0
-setInterval(()=>{
+let interval = setInterval(()=>{
   if(i<arr.length+1){
     //clearing canvas
     ctx.fillStyle = 'black'
@@ -48,5 +48,6 @@ setInterval(()=>{
     draw()
   }else{
     console.log('fnished')
+    clearInterval(interval)
   }
 }, 1)
